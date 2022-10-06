@@ -1,4 +1,4 @@
-// Import stylesheets
+//1.longest word
 
 const sentence = 'I woke up early today';
 // const sentence = 'I went straight to the beach';
@@ -28,7 +28,7 @@ const long = arr.reduce((longWord, currentWord) => {
 }, '');
 console.log(long);
 
-//math sequence
+//2.math sequence
 
 const seq = [5, 10, 15, 20];
 let arithmeticCount = 0;
