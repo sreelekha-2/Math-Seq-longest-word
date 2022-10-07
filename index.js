@@ -1,18 +1,22 @@
 //1.longest word
 
-const sentence = 'I woke up early today';
+const sentence = 'I woke up early  today';
 // const sentence = 'I went straight to the beach';
 const arr = sentence.split(' ');
-longestWord(sentence);
+
+let longArr = [];
 
 function longestWord(sentence) {
-  let longest = arr[0];
+  let longest = '';
   arr.forEach((word) => {
     if (word.length > longest.length) {
       longest = word;
+    } else if (word.length === longest.length) {
+      longArr.push(word);
     }
   });
-  return longest;
+  longArr.unshift(longest);
+  return longArr;
 }
 
 console.log(longestWord(sentence));
@@ -28,7 +32,7 @@ const long = arr.reduce((longWord, currentWord) => {
 }, '');
 console.log(long);
 
-//2.math sequence
+// 2.math sequence
 
 const seq = [5, 10, 15, 20];
 let arithmeticCount = 0;
